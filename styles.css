@@ -1,0 +1,115 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Para remover a barra de rolagem horizontal */
+    /* overflow-y: hidden; */ /* Remova esta linha para permitir o scroll vertical */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%; /* Ajuste o padding vertical e horizontal */
+    background-color: #0c0268;
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row; /* Ajuste para linha */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold; /* Destaca os links */
+}
+
+section.video-background {
+    position: relative;
+    height: 100vh;
+}
+
+section.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(94, 94, 94, 0.5); /* Cor de fundo cinza com 50% de opacidade */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+.content a {
+    color: inherit; /* Herda a cor do texto pai */
+    text-decoration: none; /* Remove a decoração do texto (sublinhado) */
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.content img {
+    max-width: 100%; /* Define a largura máxima do GIF para ser igual à largura do contêiner pai */
+    height: auto; /* Mantém a proporção do GIF */
+    display: block; /* Garante que o GIF seja exibido como um bloco */
+    margin: 0 auto; /* Centraliza o GIF horizontalmente */
+    max-height: 270px; /* Define a altura máxima do GIF */
+}
+
+.biografia-page {
+    overflow-y: auto; /* Adiciona scroll vertical */
+}
+
+#inicio {
+    overflow-y: auto;
+}
+
+/* Adições para a página de galeria */
+
+section.video-background .content {
+    padding: 0; /* Remover o padding para a galeria */
+}
+
+.content img {
+    width: 30%; /* Definir a largura das imagens para 30% */
+    margin: 10px; /* Adicionar margem entre as imagens */
+    float: left; /* Alinhar as imagens à esquerda */
+}
+
+@media screen and (max-width: 768px) {
+    .content img {
+        width: 45%; /* Ajustar a largura das imagens para telas menores */
+    }
+}
