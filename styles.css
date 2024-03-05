@@ -1,10 +1,7 @@
-/* styles.css */
-
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Para remover a barra de rolagem horizontal */
-    /* overflow-y: hidden; */ /* Remova esta linha para permitir o scroll vertical */
 }
 
 header {
@@ -98,18 +95,27 @@ footer {
 
 /* Adições para a página de galeria */
 
-section.video-background .content {
-    padding: 0; /* Remover o padding para a galeria */
+.content .gallery-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Adicione espaçamento entre as linhas */
 }
 
-.content img {
-    width: 30%; /* Definir a largura das imagens para 30% */
-    margin: 10px; /* Adicionar margem entre as imagens */
-    float: left; /* Alinhar as imagens à esquerda */
+.gallery-row img {
+    width: 30%; 
+    margin: 0 10px; /* Remova a margem inferior e adicione margem horizontal */
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
-    .content img {
-        width: 45%; /* Ajustar a largura das imagens para telas menores */
+    .content .gallery-row {
+        flex-direction: column; 
+    }
+
+    .gallery-row img {
+        width: 90%; /* Altere a largura das imagens para ocupar a largura total */
+        margin: 10px 0; /* Adicione margem superior e inferior */
     }
 }
